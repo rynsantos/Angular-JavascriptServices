@@ -1,2 +1,3 @@
-# Angular-JavascriptServices
-Angular and ASP.NET Core
+# Angular and ASP.NET Core Implementation
+
+
