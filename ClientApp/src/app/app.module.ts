@@ -10,6 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { DashboarComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+
+
+import { DashboardService } from './dashboard/dashboard.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,8 @@ import { DashboarComponent } from './dashboard/dashboard.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    DashboarComponent
+    DashboarComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,9 +34,10 @@ import { DashboarComponent } from './dashboard/dashboard.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'dashboard', component: DashboarComponent },
+      { path: 'detail/:id', component: HeroDetailComponent },
     ])
   ],
-  providers: [],
+  providers: [DashboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
