@@ -32,6 +32,12 @@ namespace angular_aspnetcore.Controllers
             var rnd = new Random();
             return Enumerable.Range(1, 4).Select(index => Heroes[rnd.Next(Heroes.Count)]);
         }
+
+        [HttpGet("{id}")]
+        public Hero Get(int id)
+        {
+            return Heroes.SingleOrDefault(_=>_.Id == id);
+        }
     }
 
     public class Hero {

@@ -1,5 +1,4 @@
-import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../shared/hero';
 import { DashboardService } from './dashboard.service';
@@ -10,7 +9,7 @@ import { DashboardService } from './dashboard.service';
   templateUrl: './dashboard.component.html'
 })
 
-export class DashboarComponent {
+export class DashboarComponent implements OnInit {
   
   public heroes: Hero[];
 
@@ -25,7 +24,8 @@ export class DashboarComponent {
 
   getHeroes(): void {
     
-    this.dashboardService.getTopHeroes()
+    this.dashboardService
+      .getTopHeroes()
       .subscribe(heroesResult => this.heroes = heroesResult);
   }
 }
