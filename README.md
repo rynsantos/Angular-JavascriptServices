@@ -4,7 +4,11 @@ This is my take on the angular demo app [Tour of Heroes](https://angular.io/tuto
 
 
 ## Things demonstrated
-
-- [ASP.NET Core](https://github.com/aspnet/Mvc)
+- [ASP.NET Core v2.0](https://github.com/aspnet/Mvc)
+- [EFCore v2.0](https://github.com/aspnet/EntityFrameworkCore)
+- CQRS & Mediatr
+- Feature folders 
+- Bootstrap
 - [Angular v5.2.0](https://github.com/angular/angular)
-- [Angular Material2](https://github.com/angular/material2)
+- [Angular Material2 (to be implemented)](https://github.com/angular/material2)
+
