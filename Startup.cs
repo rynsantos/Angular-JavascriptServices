@@ -1,10 +1,13 @@
 using angular_aspnetcore.Domain;
+using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace angular_aspnetcore
 {
@@ -28,6 +31,10 @@ namespace angular_aspnetcore
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddAutoMapper(typeof(Startup));
+            Mapper.AssertConfigurationIsValid();
+            services.AddMediatR(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

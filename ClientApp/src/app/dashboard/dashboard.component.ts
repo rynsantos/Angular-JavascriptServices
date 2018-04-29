@@ -28,4 +28,10 @@ export class DashboarComponent implements OnInit {
       .getTopHeroes()
       .subscribe(heroesResult => this.heroes = heroesResult);
   }
+
+  addHero(): void {
+    let hero = new Hero();
+    hero.name = "Hero test 123";
+    this.dashboardService.addHero(hero).subscribe(heroesResult => this.heroes.push(heroesResult));;
+  }
 }
