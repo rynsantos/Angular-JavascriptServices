@@ -2,8 +2,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Hero } from '../shared/hero';
@@ -28,7 +27,7 @@ export class HeroDetailService {
 
   getHero(id: number): Observable<Hero> {
 
-    const url = `${this._baseUrl}/api/Heroes/${id}`;
+    const url = `${this._baseUrl}api/Heroes/${id}`;
     return this.httpClient
       .get<Hero>(url);
   }

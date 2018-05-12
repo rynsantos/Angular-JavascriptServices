@@ -2,8 +2,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Hero } from '../shared/hero';
@@ -28,7 +27,7 @@ export class DashboardService {
 
   getTopHeroes(): Observable<Hero[]> {
 
-    const url = `${this._baseUrl}/api/Heroes/TopHeroes`;
+    const url = `${this._baseUrl}api/Heroes/TopHeroes`;
     return this._httpClient
       .get<Hero[]>(url);
   }
@@ -38,7 +37,7 @@ export class DashboardService {
 
 
 
-    const url = `${this._baseUrl}/api/Heroes`;
+    const url = `${this._baseUrl}api/Heroes`;
     return this._httpClient.post<Hero>(url, hero, httpOptions);
   }
 
