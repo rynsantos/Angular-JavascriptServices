@@ -4,7 +4,7 @@ This is my take on the angular demo app [Tour of Heroes](https://angular.io/tuto
 
 
 ## Things demonstrated
-- [Angular v5.2.0](https://github.com/angular/angular)
+- [Angular v6](https://github.com/angular/angular)
 - [ASP.NET Core v2.0](https://github.com/aspnet/Mvc)
 - [EFCore v2.0](https://github.com/aspnet/EntityFrameworkCore)
 - CQRS and [MediatR](https://github.com/jbogard/MediatR)
